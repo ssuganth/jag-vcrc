@@ -1,0 +1,6 @@
+security:
+  basic-auth:
+    password: ${BASIC_AUTH_PASS}
+    username: ${BASIC_AUTH_USER}
+vcrc:
+  host: ${ORDS_HOST}
