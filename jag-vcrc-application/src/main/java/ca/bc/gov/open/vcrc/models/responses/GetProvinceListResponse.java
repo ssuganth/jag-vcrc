@@ -1,0 +1,29 @@
+package ca.bc.gov.open.vcrc.models.responses;
+
+import com.fasterxml.jackson.dataformat.xml.annotation.JacksonXmlRootElement;
+import java.util.List;
+import lombok.Data;
+import lombok.EqualsAndHashCode;
+
+@Data
+@JacksonXmlRootElement(localName = "Response")
+public class GetProvinceListResponse {
+
+    private GetProvinceList getProvinceList;
+
+    @Data
+    @EqualsAndHashCode(callSuper = true)
+    static class GetProvinceList extends BaseXMLResponse {
+        private Provinces provinces;
+    }
+
+    @Data
+    static class Provinces {
+        private List<Province> province;
+    }
+
+    @Data
+    static class Province {
+        private String name;
+    }
+}
