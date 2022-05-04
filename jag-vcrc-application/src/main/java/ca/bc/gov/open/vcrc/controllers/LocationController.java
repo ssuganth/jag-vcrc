@@ -2,6 +2,7 @@ package ca.bc.gov.open.vcrc.controllers;
 
 import ca.bc.gov.open.vcrc.models.exceptions.ORDSException;
 import ca.bc.gov.open.vcrc.models.logs.OrdsErrorLog;
+import ca.bc.gov.open.vcrc.models.logs.RequestSuccessLog;
 import ca.bc.gov.open.vcrc.models.responses.GetCountriesListResponse;
 import ca.bc.gov.open.vcrc.models.responses.GetProvinceListResponse;
 import com.fasterxml.jackson.core.JsonProcessingException;
@@ -50,6 +51,10 @@ public class LocationController {
                             new HttpEntity<>(new HttpHeaders()),
                             GetCountriesListResponse.GetCountriesList.class);
 
+            log.info(
+                    objectMapper.writeValueAsString(
+                            new RequestSuccessLog("Request Success", "getCountriesList")));
+
             GetCountriesListResponse out = new GetCountriesListResponse();
             out.setGetCountriesList(resp.getBody());
             return out;
@@ -77,6 +82,10 @@ public class LocationController {
                             HttpMethod.GET,
                             new HttpEntity<>(new HttpHeaders()),
                             GetProvinceListResponse.GetProvinceList.class);
+
+            log.info(
+                    objectMapper.writeValueAsString(
+                            new RequestSuccessLog("Request Success", "getProvinceList")));
 
             GetProvinceListResponse out = new GetProvinceListResponse();
             out.setGetProvinceList(resp.getBody());

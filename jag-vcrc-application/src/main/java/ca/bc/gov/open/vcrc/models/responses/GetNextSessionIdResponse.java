@@ -12,7 +12,7 @@ public class GetNextSessionIdResponse {
 
     @Data
     @EqualsAndHashCode(callSuper = true)
-    static class GetNextSessionId extends BaseXMLResponse {
+    public static class GetNextSessionId extends BaseXMLResponse {
         private String sessionId;
     }
 }

@@ -12,7 +12,7 @@ public class GetNextInvoiceIdResponse {
 
     @Data
     @EqualsAndHashCode(callSuper = true)
-    static class GetNextInvoiceId extends BaseXMLResponse {
+    public static class GetNextInvoiceId extends BaseXMLResponse {
         private String invoiceId;
     }
 }
