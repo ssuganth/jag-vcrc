@@ -13,7 +13,7 @@ public class GetProvinceListResponse {
 
     @Data
     @EqualsAndHashCode(callSuper = true)
-    static class GetProvinceList extends BaseXMLResponse {
+    public static class GetProvinceList extends BaseXMLResponse {
         private Provinces provinces;
     }
 

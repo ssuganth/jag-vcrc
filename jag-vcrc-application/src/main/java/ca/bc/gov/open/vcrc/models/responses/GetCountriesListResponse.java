@@ -13,13 +13,13 @@ public class GetCountriesListResponse {
 
     @Data
     @EqualsAndHashCode(callSuper = true)
-    static class GetCountriesList extends BaseXMLResponse {
+    public static class GetCountriesList extends BaseXMLResponse {
         private Countries countries;
     }
 
     @Data
     static class Countries {
-        List<Country> countries;
+        List<Country> country;
     }
 
     @Data
