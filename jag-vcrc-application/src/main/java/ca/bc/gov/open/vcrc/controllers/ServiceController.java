@@ -22,19 +22,19 @@ public class ServiceController {
         this.restTemplate = restTemplate;
     }
 
-    @GetMapping(value = "CreateNewCRCService/Services", produces = MediaType.APPLICATION_XML_VALUE)
+    @GetMapping(value = "CreateNewCRCService/Services", produces = MediaType.TEXT_XML_VALUE)
     public CreateNewCRCServiceResponse createNewCrcService(
             CreateNewCRCServiceRequest createNewCRCServiceRequest) {
         return null;
     }
 
-    @GetMapping(value = "CreateSharingService/Services", produces = MediaType.APPLICATION_XML_VALUE)
+    @GetMapping(value = "CreateSharingService/Services", produces = MediaType.TEXT_XML_VALUE)
     public CreateSharingServiceResponse createSharingService(
             CreateSharingServiceRequest createSharingServiceRequest) {
         return null;
     }
 
-    @GetMapping(value = "GetServiceFeeAmount/Services", produces = MediaType.APPLICATION_XML_VALUE)
+    @GetMapping(value = "GetServiceFeeAmount/Services", produces = MediaType.TEXT_XML_VALUE)
     public GetServiceFeeAmountResponse getServiceFeeAmount(
             GetServiceFeeAmountRequest getServiceFeeAmountRequest) {
         return null;
@@ -42,7 +42,7 @@ public class ServiceController {
 
     @GetMapping(
             value = "UpdateServiceFinancialTxn/Services",
-            produces = MediaType.APPLICATION_XML_VALUE)
+            produces = MediaType.TEXT_XML_VALUE)
     public UpdateServiceFinancialTxnResponse updateServiceFinancialTxn(
             CreateSharingServiceRequest createSharingServiceRequest) {
         return null;

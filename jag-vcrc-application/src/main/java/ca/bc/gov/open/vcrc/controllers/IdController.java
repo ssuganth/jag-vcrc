@@ -18,12 +18,12 @@ public class IdController {
         this.restTemplate = restTemplate;
     }
 
-    @GetMapping(value = "GetNextSessionId/Services", produces = MediaType.APPLICATION_XML_VALUE)
+    @GetMapping(value = "GetNextSessionId/Services", produces = MediaType.TEXT_XML_VALUE)
     public LogEivFailureResponse getNextSessionId(GetNextInvoiceIdRequest getNextInvoiceIdRequest) {
         return null;
     }
 
-    @GetMapping(value = "GetNextInvoiceId/Services", produces = MediaType.APPLICATION_XML_VALUE)
+    @GetMapping(value = "GetNextInvoiceId/Services", produces = MediaType.TEXT_XML_VALUE)
     public GetNextInvoiceIdResponse getNextInvoiceId(GetNextInvoiceIdRequest logEivFailureRequest) {
         return null;
     }

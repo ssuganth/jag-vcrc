@@ -18,12 +18,12 @@ public class LoggingController {
         this.restTemplate = restTemplate;
     }
 
-    @GetMapping(value = "LogEivFailure/Services", produces = MediaType.APPLICATION_XML_VALUE)
+    @GetMapping(value = "LogEivFailure/Services", produces = MediaType.TEXT_XML_VALUE)
     public LogEivFailureResponse logEivFailure(LogEivFailureRequest logEivFailureRequest) {
         return null;
     }
 
-    @GetMapping(value = "LogPaymentFailure/Services", produces = MediaType.APPLICATION_XML_VALUE)
+    @GetMapping(value = "LogPaymentFailure/Services", produces = MediaType.TEXT_XML_VALUE)
     public LogPaymentFailureResponse logPaymentFailure(LogEivFailureRequest logEivFailureRequest) {
         return null;
     }

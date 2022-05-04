@@ -17,7 +17,7 @@ public class AuthenticationController {
         this.restTemplate = restTemplate;
     }
 
-    @GetMapping(value = "DoAuthenticateUser/Services", produces = MediaType.APPLICATION_XML_VALUE)
+    @GetMapping(value = "DoAuthenticateUser/Services", produces = MediaType.TEXT_XML_VALUE)
     public AuthenticateUserResponse authenticateUser(
             AuthenticateUserRequest authenticateUserRequest) {
         return null;

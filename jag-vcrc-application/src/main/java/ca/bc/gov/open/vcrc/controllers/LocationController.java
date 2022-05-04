@@ -36,7 +36,7 @@ public class LocationController {
         this.objectMapper = objectMapper;
     }
 
-    @GetMapping(value = "GetCountryList/Services", produces = MediaType.APPLICATION_XML_VALUE)
+    @GetMapping(value = "GetCountryList/Services", produces = MediaType.TEXT_XML_VALUE)
     public GetCountriesListResponse getCountriesList() throws JsonProcessingException {
 
         UriComponentsBuilder builder =
@@ -65,7 +65,7 @@ public class LocationController {
         }
     }
 
-    @GetMapping(value = "GetProvinceList/Services", produces = MediaType.APPLICATION_XML_VALUE)
+    @GetMapping(value = "GetProvinceList/Services", produces = MediaType.TEXT_XML_VALUE)
     public GetProvinceListResponse getProvinceList() throws JsonProcessingException {
         UriComponentsBuilder builder =
                 UriComponentsBuilder.fromHttpUrl(ordsHost + "locations/provinces");

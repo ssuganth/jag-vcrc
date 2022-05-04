@@ -23,7 +23,7 @@ public class ApplicantController {
 
     @GetMapping(
             value = "CheckApplicantForPrevCRC/Services",
-            produces = MediaType.APPLICATION_XML_VALUE)
+            produces = MediaType.TEXT_XML_VALUE)
     public CheckApplicantForPrevCRCResponse checkApplicantForPrevCRC(
             CheckApplicantForPrevCRCRequest checkApplicantForPrevCRCRequest) {
 
@@ -32,18 +32,18 @@ public class ApplicantController {
 
     @GetMapping(
             value = "CheckApplicantForPrevCRCEx/Services",
-            produces = MediaType.APPLICATION_XML_VALUE)
+            produces = MediaType.TEXT_XML_VALUE)
     public CheckApplicantForPrevCRCExResponse checkApplicantForPrevCRCEx(
             CheckApplicantForPrevCRCRequest checkApplicantForPrevCRCRequest) {
         return null;
     }
 
-    @GetMapping(value = "CreateApplicant/Services", produces = MediaType.APPLICATION_XML_VALUE)
+    @GetMapping(value = "CreateApplicant/Services", produces = MediaType.TEXT_XML_VALUE)
     public CreateApplicantResponse createApplicant(CreateApplicantRequest createApplicant) {
         return null;
     }
 
-    @GetMapping(value = "CreateApplicantEx/Services", produces = MediaType.APPLICATION_XML_VALUE)
+    @GetMapping(value = "CreateApplicantEx/Services", produces = MediaType.TEXT_XML_VALUE)
     public CreateApplicantResponse createApplicantEx(CreateApplicantRequest createApplicant) {
         return null;
     }
