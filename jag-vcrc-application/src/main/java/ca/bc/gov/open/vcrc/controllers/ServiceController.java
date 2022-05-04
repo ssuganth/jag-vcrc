@@ -40,9 +40,7 @@ public class ServiceController {
         return null;
     }
 
-    @GetMapping(
-            value = "UpdateServiceFinancialTxn/Services",
-            produces = MediaType.TEXT_XML_VALUE)
+    @GetMapping(value = "UpdateServiceFinancialTxn/Services", produces = MediaType.TEXT_XML_VALUE)
     public UpdateServiceFinancialTxnResponse updateServiceFinancialTxn(
             CreateSharingServiceRequest createSharingServiceRequest) {
         return null;

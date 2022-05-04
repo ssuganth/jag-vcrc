@@ -21,18 +21,14 @@ public class ApplicantController {
         this.restTemplate = restTemplate;
     }
 
-    @GetMapping(
-            value = "CheckApplicantForPrevCRC/Services",
-            produces = MediaType.TEXT_XML_VALUE)
+    @GetMapping(value = "CheckApplicantForPrevCRC/Services", produces = MediaType.TEXT_XML_VALUE)
     public CheckApplicantForPrevCRCResponse checkApplicantForPrevCRC(
             CheckApplicantForPrevCRCRequest checkApplicantForPrevCRCRequest) {
 
         return null;
     }
 
-    @GetMapping(
-            value = "CheckApplicantForPrevCRCEx/Services",
-            produces = MediaType.TEXT_XML_VALUE)
+    @GetMapping(value = "CheckApplicantForPrevCRCEx/Services", produces = MediaType.TEXT_XML_VALUE)
     public CheckApplicantForPrevCRCExResponse checkApplicantForPrevCRCEx(
             CheckApplicantForPrevCRCRequest checkApplicantForPrevCRCRequest) {
         return null;
