@@ -7,6 +7,4 @@ import lombok.EqualsAndHashCode;
 @Data
 @EqualsAndHashCode(callSuper = true)
 @JacksonXmlRootElement(localName = "CheckApplicantForPrevCRC")
-public class CheckApplicantForPrevCRCResponse extends BaseXMLResponse {
-    private String serviceId;
-}
+public class CheckApplicantForPrevCRCResponse extends BaseXMLResponse {}

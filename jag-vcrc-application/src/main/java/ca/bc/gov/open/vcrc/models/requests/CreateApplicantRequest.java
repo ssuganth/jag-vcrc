@@ -8,8 +8,10 @@ import lombok.Data;
 public class CreateApplicantRequest implements Serializable {
 
     private String orgTicketNumber;
+    private String callPurpose;
     private String legalSurenameNm;
-    private String LegalSecondNm;
+    private String legalFirstNm;
+    private String legalSecondNm;
     private Date birthDt;
     private String genderTxt;
     private String birthPlace;
@@ -30,15 +32,25 @@ public class CreateApplicantRequest implements Serializable {
     private String countryNm;
     private String postalCodeTxt;
     private String driversLicNo;
+    private String emailAddress;
+    private String emailType;
 
     //    The weird setters are needed to set binding on request ingestion
+
+    public void setCall_Purpose(String callPurpose) {
+        this.callPurpose = callPurpose;
+    }
 
     public void setLegal_Surename_Nm(String legalSurenameNm) {
         this.legalSurenameNm = legalSurenameNm;
     }
 
+    public void setLegal_First_Nm(String legalFirstName) {
+        this.legalFirstNm = legalFirstName;
+    }
+
     public void setLegal_Second_Nm(String legalSecondNm) {
-        LegalSecondNm = legalSecondNm;
+        this.legalSecondNm = legalSecondNm;
     }
 
     public void setBirth_Dt(Date birthDt) {
@@ -119,5 +131,13 @@ public class CreateApplicantRequest implements Serializable {
 
     public void setDrivers_Lic_No(String driversLicNo) {
         this.driversLicNo = driversLicNo;
+    }
+
+    public void setEmail_Address(String emailAddress) {
+        this.emailAddress = emailAddress;
+    }
+
+    public void setEmail_Type(String emailType) {
+        this.emailType = emailType;
     }
 }

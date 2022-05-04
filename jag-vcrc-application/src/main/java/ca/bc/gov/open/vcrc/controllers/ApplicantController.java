@@ -27,17 +27,14 @@ public class ApplicantController {
     public CheckApplicantForPrevCRCResponse checkApplicantForPrevCRC(
             CheckApplicantForPrevCRCRequest checkApplicantForPrevCRCRequest) {
 
-        var x = new CheckApplicantForPrevCRCResponse();
-        x.setMessage("Hi");
-        x.setServiceId("1");
-        return x;
+        return null;
     }
 
     @GetMapping(
             value = "CheckApplicantForPrevCRCEx/Services",
             produces = MediaType.APPLICATION_XML_VALUE)
     public CheckApplicantForPrevCRCExResponse checkApplicantForPrevCRCEx(
-            CheckApplicantForPrevCRCExResponse checkApplicantForPrevCRCRequest) {
+            CheckApplicantForPrevCRCRequest checkApplicantForPrevCRCRequest) {
         return null;
     }
 
