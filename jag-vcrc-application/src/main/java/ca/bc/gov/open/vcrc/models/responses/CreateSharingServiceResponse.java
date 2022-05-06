@@ -12,7 +12,7 @@ public class CreateSharingServiceResponse {
 
     @Data
     @EqualsAndHashCode(callSuper = true)
-    class CreateSharingService extends BaseXMLResponse {
+    public static class CreateSharingService extends BaseXMLResponse {
         private String serviceId;
     }
 }

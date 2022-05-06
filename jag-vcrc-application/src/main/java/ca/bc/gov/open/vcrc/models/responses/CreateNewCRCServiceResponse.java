@@ -12,7 +12,7 @@ public class CreateNewCRCServiceResponse {
 
     @Data
     @EqualsAndHashCode(callSuper = true)
-    class CreateNewCRCService extends BaseXMLResponse {
+    public static class CreateNewCRCService extends BaseXMLResponse {
         private String serviceId;
     }
 }

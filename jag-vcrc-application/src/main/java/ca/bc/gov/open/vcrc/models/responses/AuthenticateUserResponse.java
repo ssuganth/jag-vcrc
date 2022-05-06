@@ -14,7 +14,7 @@ public class AuthenticateUserResponse {
 
     @Data
     @EqualsAndHashCode(callSuper = true)
-    class AuthenticateInner extends BaseXMLResponse {
+    public class AuthenticateInner extends BaseXMLResponse {
         private AccessCodeResponse accessCodeResponse;
         private ScopeLevels scopeLevels;
         private ScheduleTypes scheduleTypes;
@@ -75,12 +75,12 @@ public class AuthenticateUserResponse {
     }
 
     @Data
-    class ScopeLevels {
+    static class ScopeLevels {
         List<ScopeLevelItem> scopeLevel;
     }
 
     @Data
-    class ScheduleTypes {
+    static class ScheduleTypes {
         List<ScheduleTypeItem> scheduleType;
     }
 
