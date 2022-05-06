@@ -12,7 +12,7 @@ public class GetServiceFeeAmountResponse {
 
     @Data
     @EqualsAndHashCode(callSuper = true)
-    static class GetServiceFeeAmount extends BaseXMLResponse {
+    public static class GetServiceFeeAmount extends BaseXMLResponse {
         private String serviceFeeAmount;
     }
 }
