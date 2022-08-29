@@ -1,10 +1,11 @@
 name: manifests
-workflow_dispatch:
-inputs:
-  env:
-    description: 'Image Target Env'  
-    required: true
-    default: 'dev'
+on:
+  workflow_dispatch:
+    inputs:
+      env:
+        description: 'Image Target Env'  
+        required: true
+        default: 'dev'
     
 jobs:
   list-manifests:
