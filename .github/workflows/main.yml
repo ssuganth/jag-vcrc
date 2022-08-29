@@ -23,5 +23,4 @@ jobs:
             manifest: ${{ fromJson(needs.list-manifests.outputs.matrix) }}
     steps:
       - uses: actions/checkout@v2   
-      - run: |
-        ./check-manifest ${{ martix.manifest }}
+      - run: echo ${{ martix.manifest }}
