@@ -1,0 +1,27 @@
+name: manifests
+workflow_dispatch:
+inputs:
+  env:
+    description: 'Image Target Env'  
+    required: true
+    default: 'dev'
+    
+jobs:
+  list-manifests:
+    runs-on: ubuntu-latest
+    outputs:
+      matrix: ${{ steps.set-matrix.outputs.matrix }}
+    steps:
+      - uses: actions/checkout@v2
+      - id: set-matrix
+        run: echo "::set-output name=matrix::$(cat devops/test.txt | jq -R -s -c 'split(",")[:-1]')"
+  check:
+    needs: list-manifests
+    runs-on: ubuntu-latest
+    strategy:
+        matrix:
+            manifest: ${{ fromJson(needs.list-manifests.outputs.matrix) }}
+    steps:
+      - uses: actions/checkout@v2   
+      - run: |
+        ./check-manifest ${{ martix.manifest }}
